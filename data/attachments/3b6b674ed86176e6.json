@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": ".//button[contains(., \"Whisper Large v3 Turbo\") and not(.//button)]"
+}

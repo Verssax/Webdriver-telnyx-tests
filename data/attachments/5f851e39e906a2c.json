@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": ".//button[contains(@role, \"tab\") and contains(., \"Speech to Text\") and not(.//button[contains(@role, \"tab\")])]"
+}

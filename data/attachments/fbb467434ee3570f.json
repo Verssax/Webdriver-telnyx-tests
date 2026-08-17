@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//button[contains(., \"Albania\") and not(.//button)]\"}\n  (Session info: chrome=152.0.7977.42)",
+  "stacktrace": "#0 0x55a47a5692ca <unknown>\n#1 0x55a479eccb39 <unknown>\n#2 0x55a479f228d5 <unknown>\n#3 0x55a479f22b41 <unknown>\n#4 0x55a479f6da54 <unknown>\n#5 0x55a479f6ac63 <unknown>\n#6 0x55a479f15ecb <unknown>\n#7 0x55a479f16cb1 <unknown>\n#8 0x55a47a52d7f0 <unknown>\n#9 0x55a47a52be6a <unknown>\n#10 0x55a47a516bb5 <unknown>\n#11 0x55a47a52cb2a <unknown>\n#12 0x55a47a4ffdf0 <unknown>\n#13 0x55a47a554238 <unknown>\n#14 0x55a47a5543d5 <unknown>\n#15 0x55a47a567e53 <unknown>\n#16 0x7f4fdf0dea94 <unknown>\n#17 0x7f4fdf16ba34 __clone\n"
+}

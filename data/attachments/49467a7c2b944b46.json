@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": ".//span[contains(., \"Please enter a message\") and not(.//span)]"
+}

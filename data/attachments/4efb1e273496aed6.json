@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//*[@id=\"twitter\"]/ancestor-or-self::a[1]"
+}
