@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": ".//p[contains(., \"countries and territories with inbound calling\") and not(.//p)]"
+}

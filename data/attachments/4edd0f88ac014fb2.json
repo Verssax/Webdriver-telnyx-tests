@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": ".//span[contains(., \"curl api.telnyx.com/v2/ai/assistants\") and not(.//span)]"
+}
