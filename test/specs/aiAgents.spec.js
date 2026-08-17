@@ -8,7 +8,7 @@ describe('Ai block tests on VoiceAi page', () => {
     it('Changing AI model updates pressed state for each available model', async () => {
         const modelsList = await voiceAIPage.getModelLocatorsList();
         await voiceAIPage.hideHeader();
-        await modelsList[0].scrollIntoView()
+        await modelsList[0].scrollIntoView({ block: 'center', inline: 'center' });
         for (const model of modelsList) {
             await voiceAIPage.changeAiModel(model);
             await expect(model).toHaveAttribute('aria-pressed', 'true');

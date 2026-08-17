@@ -20,7 +20,7 @@ class IntegrationsPage extends BasePage{
         return $('a[href="/integrations/quickbooks-online"]');
     }
     get backToIntegrationsBtn () {
-        return $('a[href="/integrations"]');
+        return $('a*=Back to Integrations');
     }
 
     clickAsanaBtn() {
