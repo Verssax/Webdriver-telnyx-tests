@@ -1,0 +1,22 @@
+{
+    "reasons": {
+        "salesInquiry": "Sales-Inquiry"
+    },
+    "phoneCountries": [
+        "United States (+1)",
+        "United Kingdom (+44)",
+        "France (+33)",
+        "Spain (+34)"
+    ],
+    "products": [
+        "AI / Inference",
+        "Messaging",
+        "IoT SIM / eSIM"
+    ],
+    "budgets": [
+        "Less than $1000",
+        "$1000-$2000",
+        "$2000-$5000",
+        "$5000+"
+    ]
+}

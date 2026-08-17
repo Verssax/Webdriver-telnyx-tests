@@ -1,0 +1,24 @@
+services:
+  chrome-tests:
+    build:
+      context: .
+      args:
+        BROWSER_IMAGE: selenium/standalone-chrome:130.0
+        WDIO_CONF: config/wdio.chrome.conf.js
+    environment:
+      HEADLESS: "true"
+      BASE_URL: https://telnyx.com/
+    volumes:
+      - ./allure-results:/app/allure-results
+
+  firefox-tests:
+    build:
+      context: .
+      args:
+        BROWSER_IMAGE: selenium/standalone-firefox:130.0
+        WDIO_CONF: config/wdio.firefox.conf.js
+    environment:
+      HEADLESS: "true"
+      BASE_URL: https://telnyx.com/
+    volumes:
+      - ./allure-results:/app/allure-results
