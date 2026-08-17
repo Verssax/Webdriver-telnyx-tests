@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": ".//button[contains(., \"GLM 5.2\") and not(.//button)]"
-}

@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": ".//button[contains(., \"Qwen3 235B A22B\") and not(.//button)]"
-}

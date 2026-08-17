@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": ".//button[contains(., \"Deepgram Nova 3\") and not(.//button)]"
-}

@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": ".//button[contains(@type, \"submit\") and contains(., \"SEND MESSAGE\") and not(.//button[contains(@type, \"submit\")])]"
-}
