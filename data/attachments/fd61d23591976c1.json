@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": ".//a[contains(., \"Back to Integrations\") and not(.//a)]"
-}

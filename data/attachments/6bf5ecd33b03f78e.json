@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//button[contains(., \"GLM 5.2\") and not(.//button)]\"}\n  (Session info: chrome=130.0.6723.91)",
+  "stacktrace": "#0 0x55dc9741e13a <unknown>\n#1 0x55dc96f39460 <unknown>\n#2 0x55dc96f85f96 <unknown>\n#3 0x55dc96f86221 <unknown>\n#4 0x55dc96fcb5d4 <unknown>\n#5 0x55dc96faa03d <unknown>\n#6 0x55dc96fc8af6 <unknown>\n#7 0x55dc96fa9db3 <unknown>\n#8 0x55dc96f78c10 <unknown>\n#9 0x55dc96f79bee <unknown>\n#10 0x55dc973ea3cb <unknown>\n#11 0x55dc973ee368 <unknown>\n#12 0x55dc973d7eec <unknown>\n#13 0x55dc973eeee7 <unknown>\n#14 0x55dc973bd13f <unknown>\n#15 0x55dc9740c858 <unknown>\n#16 0x55dc9740ca20 <unknown>\n#17 0x55dc9741cfb6 <unknown>\n#18 0x7f1375ca8a94 <unknown>\n#19 0x7f1375d35a34 __clone\n"
+}
