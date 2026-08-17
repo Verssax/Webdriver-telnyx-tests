@@ -172,8 +172,30 @@ Same root cause as above, but happening inside the container: even though
 the `selenium/standalone-firefox`/`selenium/standalone-chrome` base images
 already ship the browser, WDIO doesn't know that and tries to download its
 own copy anyway, which then fails to unpack because the image is missing
-`xz`. The `Dockerfile`'s `CMD` now resolves the browser already installed in
-the image at container start and exports it as `FIREFOX_BINARY`/
-`CHROME_BINARY` before running the tests, so this download is skipped
-entirely — just rebuild the image (`npm run docker:build:firefox` /
-`docker compose build`) to pick up the fix.
+`xz`. `docker-entrypoint.sh` resolves the browser already installed in the
+image at container start and exports it as `FIREFOX_BINARY`/`CHROME_BINARY`
+before running the tests, so this download is skipped entirely — just
+rebuild the image (`npm run docker:build:firefox` / `docker compose build`)
+to pick up the fix.
+
+**`This version of ChromeDriver only supports Chrome version 152` (inside
+Docker)**
+
+Caused by pinning `browserVersion: 'stable'` in the capabilities — it tells
+WDIO's driver manager to fetch a chromedriver matching whatever "stable"
+currently is upstream, ignoring the actual (older, pinned) Chrome version
+baked into the `selenium/standalone-chrome:130.0` image. Fixed by removing
+that pin; WDIO now detects the real version straight from `CHROME_BINARY`
+and fetches a matching driver.
+
+**`Running Firefox as root in a regular user's session is not supported`
+(inside Docker)**
+
+Firefox refuses to launch as root, but the Dockerfile runs as root to
+install Node/npm. `docker-entrypoint.sh` now chowns `/app` (including a
+bind-mounted `./allure-results`) to the image's built-in `seluser`, then
+drops to that user before actually running WDIO. One side effect: on Linux
+hosts, the `./allure-results` folder on your machine will end up owned by
+`seluser`'s uid after a Docker run — harmless (still world-readable, and
+it's git-ignored anyway), but if you ever need to delete it manually and hit
+a permission error, `sudo rm -rf allure-results` clears it.

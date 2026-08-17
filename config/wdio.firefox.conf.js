@@ -16,8 +16,6 @@ export const config = deepmerge(sharedConfig, {
     capabilities: [{
         maxInstances: 5,
         browserName: 'firefox',
-
-        browserVersion: 'stable',
         'moz:firefoxOptions': firefoxOptions
     }]
 });

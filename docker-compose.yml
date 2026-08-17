@@ -9,6 +9,7 @@ services:
       HEADLESS: "true"
       BASE_URL: https://telnyx.com/
     volumes:
+      # Mount out so the Allure results survive after the container exits.
       - ./allure-results:/app/allure-results
 
   firefox-tests:

@@ -23,5 +23,5 @@ ENV WDIO_CONF=${WDIO_CONF}
 
 ENV HEADLESS=true
 
-
-CMD ["sh", "-c", "export FIREFOX_BINARY=$(command -v firefox || true); export CHROME_BINARY=$(command -v google-chrome || command -v google-chrome-stable || true); npx wdio run $WDIO_CONF"]
+RUN chmod +x docker-entrypoint.sh
+CMD ["./docker-entrypoint.sh"]
