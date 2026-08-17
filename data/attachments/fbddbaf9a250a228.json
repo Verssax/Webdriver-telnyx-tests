@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//button[contains(., \"Zimbabwe\") and not(.//button)]\"}\n  (Session info: chrome=130.0.6723.91)",
-  "stacktrace": "#0 0x558a7eac113a <unknown>\n#1 0x558a7e5dc460 <unknown>\n#2 0x558a7e628f96 <unknown>\n#3 0x558a7e629221 <unknown>\n#4 0x558a7e66e5d4 <unknown>\n#5 0x558a7e64d03d <unknown>\n#6 0x558a7e66baf6 <unknown>\n#7 0x558a7e64cdb3 <unknown>\n#8 0x558a7e61bc10 <unknown>\n#9 0x558a7e61cbee <unknown>\n#10 0x558a7ea8d3cb <unknown>\n#11 0x558a7ea91368 <unknown>\n#12 0x558a7ea7aeec <unknown>\n#13 0x558a7ea91ee7 <unknown>\n#14 0x558a7ea6013f <unknown>\n#15 0x558a7eaaf858 <unknown>\n#16 0x558a7eaafa20 <unknown>\n#17 0x558a7eabffb6 <unknown>\n#18 0x7f0840be5a94 <unknown>\n#19 0x7f0840c72a34 __clone\n"
-}

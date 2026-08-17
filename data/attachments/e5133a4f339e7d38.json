@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//*[@id=\"facebook\"]/ancestor-or-self::a[1]"
+}

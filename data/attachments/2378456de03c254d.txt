@@ -1,0 +1,2 @@
+javascript error: WebDriverError: javascript error: {"status":60,"value":"https://telnyx.com/integrations/asana has no size and location"}
+  (Session info: chrome=130.0.6723.91) when running "actions" with method "POST"
