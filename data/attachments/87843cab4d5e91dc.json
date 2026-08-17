@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "./option[normalize-space(@value) = \"IoT SIM / eSIM\"]|./optgroup/option[normalize-space(@value) = \"IoT SIM / eSIM\"]"
+}
