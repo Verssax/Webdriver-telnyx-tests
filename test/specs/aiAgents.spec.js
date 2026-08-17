@@ -2,7 +2,10 @@ import voiceAIPage from "../pages/voiceAI.page";
 
 describe('Ai block tests on VoiceAi page', () => {
     beforeEach( async () =>{
-        await voiceAIPage.openPage()            
+        await voiceAIPage.openPage()   
+        if (voiceAIPage.oneTrustBanner) {
+            await voiceAIPage.hideTrustBanner()
+        }         
     });  
 
     it('Changing AI model updates pressed state for each available model', async () => {

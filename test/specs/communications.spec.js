@@ -4,7 +4,10 @@ import communicationFilter from "../testData/communicationsFilter.json"
 
 describe('Communication page tests', () => {
         beforeEach( async () =>{
-            await gCommunicationsPage.openPage()            
+            await gCommunicationsPage.openPage()  
+            if (gCommunicationsPage.oneTrustBanner) {
+                await gCommunicationsPage.hideTrustBanner()
+            }           
         });    
     
     it('SIP filter works', async ()=>{        

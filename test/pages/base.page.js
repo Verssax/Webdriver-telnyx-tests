@@ -8,6 +8,16 @@ class BasePage{
         this.footer=  Footer;
     };    
     
+    get oneTrustBanner () {        
+        return $('.onetrust-banner-sdk')
+    }
+
+    async hideTrustBanner () {
+        await browser.execute(() => {
+            const banner = document.querySelector('.onetrust-banner-sdk');
+            if (banner) banner.style.display = 'none';
+        });
+    }
 
     async openPage () {
       await browser.url(this.url);

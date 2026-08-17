@@ -3,9 +3,12 @@ import contuctUsPage from "../pages/contuctUs.page";
 
 
 describe('Contuct us page tests', () => {
-        beforeEach( async () =>{
-            await contuctUsPage.openPage()            
-        });    
+    beforeEach( async () => {
+        await contuctUsPage.openPage();
+        if (contuctUsPage.oneTrustBanner) {
+            await contuctUsPage.hideTrustBanner();
+        }            
+    });    
     
     it('Submit empty form shows validation error', async ()=>{        
         await contuctUsPage.clickSubmitBtn()

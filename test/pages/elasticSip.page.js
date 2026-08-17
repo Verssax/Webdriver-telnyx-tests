@@ -31,12 +31,21 @@ class ElasticSip extends BasePage{
 
     async scrollToForm() {
         await this.form.waitForExist();
-        await this.form.scrollIntoView({ block: 'center', inline: 'center' });
+        const formEl = await this.form;
+        await browser.execute((el) => {
+            el.scrollIntoView({ block: 'center', inline: 'center' });
+        }, formEl);
         await this.emailField.waitForDisplayed();
     }
 
     async submitBtnClick () {
         await this.submitBtn.click();
+    }
+
+    async fillsUserData (userData) {
+        await this.firstNameField.setValue(userData.firstName);
+        await this.lastNameField.setValue(userData.lastName);
+        await this.emailField.setValue(userData.email);
     }
 
 }

@@ -63,15 +63,15 @@ class VoiceAiPage extends BasePage{
     }
 
     async clickSpeechToTextBtn() {
-        await this.aiSpeechToTextBtn.scrollIntoView();
+        await this.aiSpeechToTextBtn.scrollIntoView({ block: 'center', inline: 'center' });
         await this.aiSpeechToTextBtn.click();
     }
 
     async hideHeader() {
-    await browser.execute(() => {
-        const header = document.querySelector('#main-menu-content');
-        if (header) header.style.display = 'none';
-    });
+        await browser.execute(() => {
+            const header = document.querySelector('#main-menu-content');
+            if (header) header.style.display = 'none';
+        });
     }
 }
 
