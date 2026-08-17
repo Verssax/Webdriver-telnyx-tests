@@ -5,9 +5,8 @@ FROM ${BROWSER_IMAGE}
 
 USER root
 
-
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl gnupg ca-certificates \
+    && apt-get install -y --no-install-recommends curl gnupg ca-certificates xz-utils \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y --no-install-recommends nodejs \
     && rm -rf /var/lib/apt/lists/*
@@ -24,4 +23,5 @@ ENV WDIO_CONF=${WDIO_CONF}
 
 ENV HEADLESS=true
 
-CMD ["sh", "-c", "npx wdio run $WDIO_CONF"]
+
+CMD ["sh", "-c", "export FIREFOX_BINARY=$(command -v firefox || true); export CHROME_BINARY=$(command -v google-chrome || command -v google-chrome-stable || true); npx wdio run $WDIO_CONF"]

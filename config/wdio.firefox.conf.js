@@ -8,7 +8,6 @@ if (isHeadless) args.push('-headless');
 
 const firefoxOptions = { args };
 
-
 if (process.env.FIREFOX_BINARY) {
     firefoxOptions.binary = process.env.FIREFOX_BINARY;
 }

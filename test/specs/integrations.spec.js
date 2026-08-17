@@ -7,6 +7,7 @@ describe('Integrations page tests', () => {
     
     it('Clicking Asana opens Asana article', async () => {
         await integrationsPage.clickAsanaBtn();
+        await expect(integrationsPage.backToIntegrationsBtn).toBeDisplayed();
         await expect(browser).toHaveUrl('asana', { containing: true });
     });
 

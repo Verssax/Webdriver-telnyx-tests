@@ -1,3 +1,4 @@
+import { th } from "@faker-js/faker";
 import BasePage from "./base.page";
 
 class IntegrationsPage extends BasePage{
@@ -23,6 +24,7 @@ class IntegrationsPage extends BasePage{
     }
 
     clickAsanaBtn() {
+        this.asanaBtn.scrollIntoView();
         this.asanaBtn.click();
     }
     

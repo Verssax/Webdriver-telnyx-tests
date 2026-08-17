@@ -24,7 +24,6 @@ Allure report to GitHub Pages.
     └── utils/                    # helpers (pickRandom, randomInt, generateUser)
 ```
 
-
 ## Install
 
 ```bash
@@ -166,3 +165,15 @@ Two independent fixes are already in the configs:
    ```
    With a binary path set, WDIO only needs to fetch a small matching driver
    (geckodriver/chromedriver), not the whole browser.
+
+**`` `xz` utility is required to unpack this archive `` (inside Docker)**
+
+Same root cause as above, but happening inside the container: even though
+the `selenium/standalone-firefox`/`selenium/standalone-chrome` base images
+already ship the browser, WDIO doesn't know that and tries to download its
+own copy anyway, which then fails to unpack because the image is missing
+`xz`. The `Dockerfile`'s `CMD` now resolves the browser already installed in
+the image at container start and exports it as `FIREFOX_BINARY`/
+`CHROME_BINARY` before running the tests, so this download is skipped
+entirely — just rebuild the image (`npm run docker:build:firefox` /
+`docker compose build`) to pick up the fix.
