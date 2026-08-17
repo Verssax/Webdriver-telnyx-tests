@@ -3,7 +3,7 @@ import integrationsPage from '../pages/integrations.page'
 describe('Integrations page tests', () => {
     beforeEach( async () =>{
         await integrationsPage.openPage();   
-        if (integrationsPage.oneTrustBanner) {
+        if (await integrationsPage.oneTrustBanner.isExisting()) {
             await integrationsPage.hideTrustBanner();
         }           
     });    

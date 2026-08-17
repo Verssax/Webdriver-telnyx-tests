@@ -3,12 +3,12 @@ import communicationFilter from "../testData/communicationsFilter.json"
 
 
 describe('Communication page tests', () => {
-        beforeEach( async () =>{
-            await gCommunicationsPage.openPage()  
-            if (gCommunicationsPage.oneTrustBanner) {
-                await gCommunicationsPage.hideTrustBanner()
-            }           
-        });    
+    beforeEach( async () =>{
+        await gCommunicationsPage.openPage()  
+        if (await gCommunicationsPage.oneTrustBanner.isExisting()) {
+            await gCommunicationsPage.hideTrustBanner()
+        }           
+    });    
     
     it('SIP filter works', async ()=>{        
         await gCommunicationsPage.chooseSIPSignaling();

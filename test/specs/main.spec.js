@@ -4,7 +4,7 @@ import socials from "../testData/socialLinks.json"
 describe('Main page tests',() => {
     beforeEach( async () => {
         await mainPage.openPage()
-        if (mainPage.oneTrustBanner) {
+        if (await mainPage.oneTrustBanner.isExisting()) {
             await mainPage.hideTrustBanner();
         }         
     });  

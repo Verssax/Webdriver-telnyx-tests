@@ -5,7 +5,7 @@ import contuctUsPage from "../pages/contuctUs.page";
 describe('Contuct us page tests', () => {
     beforeEach( async () => {
         await contuctUsPage.openPage();
-        if (contuctUsPage.oneTrustBanner) {
+        if (await contuctUsPage.oneTrustBanner.isExisting()) {
             await contuctUsPage.hideTrustBanner();
         }            
     });    

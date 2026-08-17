@@ -3,7 +3,7 @@ import voiceAIPage from "../pages/voiceAI.page";
 describe('Ai block tests on VoiceAi page', () => {
     beforeEach( async () =>{
         await voiceAIPage.openPage()   
-        if (voiceAIPage.oneTrustBanner) {
+        if (await voiceAIPage.oneTrustBanner.isExisting()) {
             await voiceAIPage.hideTrustBanner()
         }         
     });  
